@@ -4,6 +4,9 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Класс, представляющий объект ошибки.
+ */
 @Getter
 @Setter
 @RequiredArgsConstructor

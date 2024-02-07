@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import ru.clevertec.house.exception.*;
 import ru.clevertec.house.model.ErrorDto;
 
+/**
+ * Обработчик исключений.
+ */
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
