@@ -16,7 +16,7 @@
     ```
 - Необходимо добавить зависимость на стартер в dependencies:
     ```text
-        implementation "ru.clevertec.house:exception-error-handler-spring-boot-starter:1.0"
+        implementation "ru.clevertec.news:exception-error-handler-spring-boot-starter:1.0"
     ```
 
 ## Реализация

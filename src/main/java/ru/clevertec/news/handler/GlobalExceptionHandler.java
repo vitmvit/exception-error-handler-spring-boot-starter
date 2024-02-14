@@ -1,13 +1,13 @@
-package ru.clevertec.house.handler;
+package ru.clevertec.news.handler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import ru.clevertec.house.exception.EmptyListException;
-import ru.clevertec.house.exception.EntityNotFoundException;
-import ru.clevertec.house.exception.InvalidJwtException;
-import ru.clevertec.house.model.ErrorDto;
+import ru.clevertec.news.exception.EmptyListException;
+import ru.clevertec.news.exception.EntityNotFoundException;
+import ru.clevertec.news.exception.InvalidJwtException;
+import ru.clevertec.news.model.ErrorDto;
 
 /**
  * Обработчик исключений.

@@ -1,4 +1,4 @@
-package ru.clevertec.house.exception;
+package ru.clevertec.news.exception;
 
 public class InvalidJwtException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package ru.clevertec.house.model;
+package ru.clevertec.news.model;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
