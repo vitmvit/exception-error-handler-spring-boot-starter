@@ -4,10 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import ru.clevertec.news.exception.EmptyListException;
-import ru.clevertec.news.exception.EntityNotFoundException;
-import ru.clevertec.news.exception.InvalidJwtException;
-import ru.clevertec.news.exception.NoAccessError;
+import ru.clevertec.news.exception.*;
 import ru.clevertec.news.model.ErrorDto;
 
 /**
@@ -53,11 +50,11 @@ public class GlobalExceptionHandler {
     }
 
     /**
-     * Обрабатывает исключение RuntimeException и возвращает объект ErrorDto с сообщением и кодом состояния 500.
+     * Обрабатывает исключение OperationException и возвращает объект ErrorDto с сообщением и кодом состояния 500.
      */
-    @ExceptionHandler(RuntimeException.class)
+    @ExceptionHandler(OperationException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public ErrorDto error(RuntimeException e) {
+    public ErrorDto error(OperationException e) {
         return new ErrorDto(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR.value());
     }
 

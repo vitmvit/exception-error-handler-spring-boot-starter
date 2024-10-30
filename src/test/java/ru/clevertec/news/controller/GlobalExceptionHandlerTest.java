@@ -22,8 +22,8 @@ public class GlobalExceptionHandlerTest {
 
     @Test
     void errorShouldReturnEntityNotFoundException() {
-        EntityNotFoundException exception = new EntityNotFoundException();
-        String message = "Entity not found!";
+        var exception = new EntityNotFoundException();
+        var message = "Entity not found!";
 
         var response = controllerAdvice.error(exception);
 
@@ -33,8 +33,8 @@ public class GlobalExceptionHandlerTest {
 
     @Test
     void errorShouldReturnEmptyListException() {
-        EmptyListException exception = new EmptyListException();
-        String message = "List is empty!";
+        var exception = new EmptyListException();
+        var message = "List is empty!";
 
         var response = controllerAdvice.error(exception);
 
@@ -44,8 +44,8 @@ public class GlobalExceptionHandlerTest {
 
     @Test
     void errorShouldReturnInvalidJwtException() {
-        String message = "Invalid jwt!";
-        InvalidJwtException exception = new InvalidJwtException(message);
+        var message = "Invalid jwt!";
+        var exception = new InvalidJwtException(message);
 
         var response = controllerAdvice.error(exception);
 
@@ -55,8 +55,8 @@ public class GlobalExceptionHandlerTest {
 
     @Test
     void errorShouldReturnNoAccessException() {
-        String message = "No access";
-        NoAccessError exception = new NoAccessError();
+        var message = "No access";
+        var exception = new NoAccessError();
 
         var response = controllerAdvice.error(exception);
 
@@ -66,8 +66,8 @@ public class GlobalExceptionHandlerTest {
 
     @Test
     void handleThrowable() {
-        String message = "Error";
-        Exception exception = new Exception(message);
+        var message = "Error";
+        var exception = new Exception(message);
 
         var response = controllerAdvice.handleException(exception);
 
